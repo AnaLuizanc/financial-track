@@ -36,6 +36,27 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
+## Docker
+
+### Produção (SSR)
+
+Build e execute:
+
+```bash
+docker build -t fin-track .
+docker run --rm -p 4000:4000 fin-track
+```
+
+Acesse: `http://localhost:4000/`
+
+### Desenvolvimento (ng serve)
+
+```bash
+docker compose up fin-track-dev
+```
+
+Acesse: `http://localhost:4200/`
+
 ## Running unit tests
 
 To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
